@@ -29,11 +29,6 @@ df = pd.DataFrame(
 )
 
 
-config = {
-    'Label' : st.column_config.TextColumn('Label'),
-    'Angka' : st.column_config.NumberColumn('Angka'),
-    'Warna' : st.column_config.TextColumn('Warna')
-}
 
 
 col1, col2 = st.columns([1, 3])
@@ -43,7 +38,7 @@ Height_Bar = col1.slider('Height', 0, 1000, 600)
 
 Width_Bar = col1.slider('Width', 0, 1000, 600)
 
-result = st.data_editor(df, column_config = config, num_rows='dynamic')
+result = st.data_editor(df, num_rows='dynamic')
 
 
 variabel_label = result['Label']
